@@ -38,7 +38,7 @@ public class pacman_control : MonoBehaviour
 		if (h < 0 && h < h1)	h1 = -1;
 		if (v < 0 && v < v1)	v1 = -1;
 		if (h == 0 && v != 0)	h1 = 0;
-		if (v == 0 && h != v)	v1 = 0;
+		if (v == 0 && h != 0)	v1 = 0;
 		
 		
 		camForward = Vector3.Scale(cam.forward, new Vector3(1, 0, 1)).normalized;
