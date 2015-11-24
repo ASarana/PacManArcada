@@ -42,6 +42,9 @@ public class pacman_control : MonoBehaviour
 		if (v < 0 && v < v1)	v1 = -1;
 		if (h == 0 && v != 0)	h1 = 0;
 		if (v == 0 && h != 0)	v1 = 0;
+
+
+	
 		
 		//рассчитаем перпендикуляр к камере
 		camForward = Vector3.Scale(cam.forward, new Vector3(1, 0, 1)).normalized;
@@ -70,6 +73,7 @@ public class pacman_control : MonoBehaviour
 	{
 		pacman.Move(speed*move); //двигаем пакмана
 		pacman_transform.LookAt (look); // поворачиваем его в сторону движения
+		if (!Physics.Raycast (pacman_transform.position, pacman_transform.forward, colis_dist)) 
 		mainc.Move(speed*move); // двигаем камеру за пакманом
 	}
 }
