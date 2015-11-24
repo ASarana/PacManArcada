@@ -5,11 +5,11 @@ using UnityStandardAssets.CrossPlatformInput;
 public class pacman_control : MonoBehaviour 
 {
 	private CharacterController pacman; //контроллер пакмана чтобы его двигать
-	public CharacterController mainc;  //контроллер камеры, чтобы двигать её
 	public Transform pacman_transform; //это чтобы колизи отслеживать
 	public float speed; //скорость пакмана и камеры
 	private Vector3 move; //вектор движения пакмана
 	private Transform cam; //это чтобы рассчитать движение пакмана относительно камеры
+	private Vector3 camzero; //это чтобы следить потом за пакманом
 	private Vector3 camForward;
 	private Vector3 look;
 	private float v;
@@ -27,6 +27,7 @@ public class pacman_control : MonoBehaviour
 		h = 0;
 		v1 = 0;
 		h1 = 0;
+		camzero = pacman_transform.position-cam.position;
 	}
 	
 	void Update () 
@@ -73,7 +74,6 @@ public class pacman_control : MonoBehaviour
 	{
 		pacman.Move(speed*move); //двигаем пакмана
 		pacman_transform.LookAt (look); // поворачиваем его в сторону движения
-		if (!Physics.Raycast (pacman_transform.position, pacman_transform.forward, colis_dist)) 
-		mainc.Move(speed*move); // двигаем камеру за пакманом
+		cam.position = pacman_transform.position - camzero; // ведем камеру за пакманом
 	}
 }
