@@ -37,7 +37,7 @@ public class pacman_control : MonoBehaviour
 		if (h==0) 	v = CrossPlatformInputManager.GetAxis("Vertical");
 
 		//это чтобы пакман ехал непрерывно и по горизонтали 
-		if (h > 0 && h > h1)  h1 = 1;
+	if (h > 0 && h > h1)  h1 = 1;
 		if (v > 0 && v > v1)  v1 = 1;
 		if (h < 0 && h < h1)	h1 = -1;
 		if (v < 0 && v < v1)	v1 = -1;

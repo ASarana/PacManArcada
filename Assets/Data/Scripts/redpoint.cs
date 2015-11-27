@@ -39,7 +39,6 @@ public class redpoint : MonoBehaviour
 			timer = Time.time;
 		}
 
-		print (Time.time);
 		if (Time.time - timer >= 5) 
 		{
 			clyde.rotation = new Quaternion(0,0,0,0);
