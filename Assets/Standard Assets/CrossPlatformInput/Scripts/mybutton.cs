@@ -5,7 +5,7 @@ using UnityStandardAssets.CrossPlatformInput;
 
 	public class mybutton : MonoBehaviour
     {
-	public createaxes axes;
+		public createaxes axes;
 		public string Name;
 		/*public string horizontalAxisName = "Horizontal"; // The name given to the horizontal axis for the cross platform input
 		public string verticalAxisName = "Vertical"; // The name given to the vertical axis for the cross platform input
