@@ -6,13 +6,14 @@ using UnityStandardAssets.CrossPlatformInput;
 public class createaxes : MonoBehaviour 
 {
 
-	public string horizontalAxisName = "Horizontal"; // The name given to the horizontal axis for the cross platform input
-	public string verticalAxisName = "Vertical"; // The name given to the vertical axis for the cross platform input
-	public CrossPlatformInputManager.VirtualAxis m_HorizontalVirtualAxis; // Reference to the joystick in the cross platform input
-	public CrossPlatformInputManager.VirtualAxis m_VerticalVirtualAxis; // Reference to the joystick in the cross platform input
-	// Use this for initialization
+	public string horizontalAxisName = "Horizontal"; // название оси горизонтали для кросплатформенного ввода
+	public string verticalAxisName = "Vertical"; // название оси вертикали для кросплатформенного ввода
+	public CrossPlatformInputManager.VirtualAxis m_HorizontalVirtualAxis; // создаем переменные с типом виртуальные оси
+	public CrossPlatformInputManager.VirtualAxis m_VerticalVirtualAxis; 
+
 	void OnEnable () 
 	{
+		//регистрируем оси для работы
 		m_HorizontalVirtualAxis = new CrossPlatformInputManager.VirtualAxis(horizontalAxisName);
 		CrossPlatformInputManager.RegisterVirtualAxis(m_HorizontalVirtualAxis);
 		

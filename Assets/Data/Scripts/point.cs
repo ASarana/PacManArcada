@@ -5,27 +5,41 @@ public class point : MonoBehaviour
 {
 
 	public Transform pacman_trans; //сюда подставим пакмана
-	private Transform point_trans; //это для манипуляций с точкой
-	public int pointcount; //это чтобы знать что уровень закончен количество съеденных точек
+	public LevelLogic LevelLogic;
+	private Vector3 zeropos;
+	private int Level;
 	// Use this for initialization
 	void Start () 
 	{
-		point_trans = GetComponent<Transform> (); // берем трансформ текущего объекта - точки
+		zeropos = this.transform.position;
+		Level = LevelLogic.levelnum ();
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
 		//отследим, что пакман дотронулся до точки
-		if (point_trans.position.x <= (pacman_trans.position.x + 0.5) && point_trans.position.x >= (pacman_trans.position.x - 0.5)
-		    && point_trans.position.z <= (pacman_trans.position.z + 0.5) && point_trans.position.z >= (pacman_trans.position.z - 0.5) 
-		    && point_trans.position.y <= (pacman_trans.position.y + 2) && point_trans.position.y >= (pacman_trans.position.y - 2)
+		if (this.transform.position.x <= (pacman_trans.position.x + 0.5) && this.transform.position.x >= (pacman_trans.position.x - 0.5)
+		    && this.transform.position.z <= (pacman_trans.position.z + 0.5) && this.transform.position.z >= (pacman_trans.position.z - 0.5) 
+		    && this.transform.position.y <= (pacman_trans.position.y + 2) && this.transform.position.y >= (pacman_trans.position.y - 2)
 		   ) 
 		{
 			//сдвинем точку плд платформу, якобы пакман её взял
 			print ("Взял");
-			point_trans.position= new Vector3(point_trans.position.x,point_trans.position.y-10,point_trans.position.z);
-			pointcount++;
+			this.transform.position= new Vector3(this.transform.position.x,this.transform.position.y-10,this.transform.position.z);
+			LevelLogic.TakePoint(); //увеличиваем переменну отвечающую за взятые точки
 		}
+
+		if (LevelLogic.levelnum() > Level) 
+		{
+			ReturnHome();
+			Level=LevelLogic.levelnum();
+		}
+
+
+	}
+	public void ReturnHome()
+	{
+		this.transform.position = zeropos;
 	}
 }

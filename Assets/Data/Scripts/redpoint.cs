@@ -39,7 +39,7 @@ public class redpoint : MonoBehaviour
 			timer = Time.time;
 		}
 
-		if (Time.time - timer >= 5) 
+		if (Time.time - timer >= 10) 
 		{
 			clyde.rotation = new Quaternion(0,0,0,0);
 			pinky.rotation = new Quaternion(0,0,0,0);
