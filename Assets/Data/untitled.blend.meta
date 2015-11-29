@@ -1,24 +1,21 @@
 fileFormatVersion: 2
-guid: a7aa9957ad5d92e47b2e23a733a0e4b6
-timeCreated: 1448807083
+guid: c38c4979e1dfa8e4493d764882a18a93
+timeCreated: 1448805414
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: PCmouth
-    400000: //RootNode
-    400002: PCmouth
-    2300000: //RootNode
-    2300002: PCmouth
-    3300000: //RootNode
-    3300002: PCmouth
+    100000: PCmouth
+    100002: //RootNode
+    400000: PCmouth
+    400002: //RootNode
+    2300000: PCmouth
+    2300002: //RootNode
+    3300000: PCmouth
+    3300002: //RootNode
     4300000: PChead
     4300002: PCmouth
-    7400000: PChead|PChead|PChead|PCmouthAction|PChead|PCmouthAction
-    7400002: PChead|PCmouth|PCmouth|PCmouthAction|PCmouth|PCmouthAction
-    7400004: PCmouth|PChead|PChead|PCmouthAction|PChead|PCmouthAction
-    7400006: PCmouth|PCmouth|PCmouth|PCmouthAction|PCmouth|PCmouthAction
+    7400000: Default Take
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -39,37 +36,7 @@ ModelImporter:
     animationScaleError: .5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations:
-    - serializedVersion: 16
-      name: PCmouth|PCmouth|PCmouth|PCmouthAction|PCmouth|PCmouthAction
-      takeName: PCmouth|PCmouth|PCmouth|PCmouthAction|PCmouth|PCmouthAction
-      firstFrame: 0
-      lastFrame: 62
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      loopTime: 1
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask:
-      - path: 
-        weight: 1
-      - path: PCmouth
-        weight: 1
-      maskType: 0
-      maskSource: {instanceID: 0}
+    clipAnimations: []
     isReadable: 1
   meshes:
     lODScreenPercentages: []
