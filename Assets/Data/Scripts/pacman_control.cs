@@ -9,7 +9,6 @@ public class pacman_control : MonoBehaviour
 	private Vector3 move; //вектор движения пакмана
 	private Transform cam; //это чтобы рассчитать движение пакмана относительно камеры
 	private Vector3 camForward;
-	private Vector3 look;
 	private float v;
 	private float h;
 	private float v1;
@@ -19,11 +18,11 @@ public class pacman_control : MonoBehaviour
 	private Vector3 zeropos;
 	public LevelLogic levellogic;
 	private int Level;
+	private float Y; //поворот пакмана
 	void Start () 
 	{
 		pacman = GetComponent<CharacterController>();
 		cam = Camera.main.transform;
-		look = new Vector3 (0, 0, 0);
 		v = 0; 
 		h = 0;
 		v1 = 0;
@@ -41,30 +40,28 @@ public class pacman_control : MonoBehaviour
 			if (h == 0)
 				v = CrossPlatformInputManager.GetAxis ("Vertical");
 
-			//это чтобы пакман ехал непрерывно и по горизонтали 
+
+			//это чтобы пакман ехал непрерывно и по горизонтали + смотрел в сторону движения
 			if (h > 0 && h > h1)
-				h1 = 1;
+			{h1 = 1; Y=90;}
 			if (v > 0 && v > v1)
-				v1 = 1;
+			{v1 = 1; Y=0;}
 			if (h < 0 && h < h1)
-				h1 = -1;
+			{h1 = -1; Y=-90;}
 			if (v < 0 && v < v1)
-				v1 = -1;
+			{v1 = -1; Y=180;}
 			if (h == 0 && v != 0)
 				h1 = 0;
 			if (v == 0 && h != 0)
 				v1 = 0;
+			if (h == h1 && v == v1 && h == 0 && v == 0 && h1 == 0 && v1 == 0)
+				Y=180;
 
 			//рассчитаем перпендикуляр к камере
 			camForward = Vector3.Scale (cam.forward, new Vector3 (1, 0, 1)).normalized;
 			//рассчитаем вектор движения пакмана
 			move = (v1 * camForward + h1 * cam.right).normalized;
 
-			//рассчитаем его взгляд
-			if (h == h1 && v == v1 && h == 0 && v == 0 && h1 == 0 && v1 == 0)
-				look.Set (100, 0, 0);
-			else
-				look = (v1 * camForward + h1 * cam.right) * 1000;
 
 			//это для колизий
 			/*if (Physics.Raycast (pacman_transform.position, pacman_transform.forward, colis_dist))
@@ -80,19 +77,19 @@ public class pacman_control : MonoBehaviour
 				ReturnHome ();
 				h1 = 0;
 				v1 = 0;
-				look = new Vector3 (100, 0, 0);
+				//рассчитаем его взгляд
+				Y=180;
 				Level = levellogic.levelnum ();
 				speed = speed + (float)0.1;
 			}
 
 			if (levellogic.ispacmandie() == true && levellogic.pacmanlifenum() > 0) 
 			{
-				print ("должен вернуться");
 				ReturnHome ();
 				h1 = 0;
 				v1 = 0;
 				move = (v1 * camForward + h1 * cam.right).normalized;
-				look = new Vector3 (100, 0, 0);
+				Y=180;
 			}
 
 		}
@@ -102,22 +99,21 @@ public class pacman_control : MonoBehaviour
 			h1 = 0;
 			v1 = 0;
 			move = (v1 * camForward + h1 * cam.right).normalized;
-			look = new Vector3 (100, 0, 0);
+			Y=180;
 		}
 		else if (levellogic.ispacmandie() == true  && levellogic.pacmanlifenum() <= 0) 
 		{
-			print ("умер");
 			h1 = 0;
 			v1 = 0;
 			move = (v1 * camForward + h1 * cam.right).normalized;
-			look = new Vector3 (100, 0, 0);
+			Y=180;
 		}
 	}
 	
 	private void FixedUpdate()
 	{
 		pacman.Move(speed*move); //двигаем пакмана
-		this.transform.LookAt (look); // поворачиваем его в сторону движения
+		this.transform.rotation = Quaternion.Euler(new Vector3(0, Y, 0)); //поворачиваем по направлению
 	}
 
 	public void ReturnHome()
