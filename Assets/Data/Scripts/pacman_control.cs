@@ -29,6 +29,7 @@ public class pacman_control : MonoBehaviour
 		h1 = 0;
 		zeropos = this.transform.position;
 		Level = levellogic.levelnum ();
+		Y = 180;
 	}
 	
 	void Update () 
@@ -74,6 +75,7 @@ public class pacman_control : MonoBehaviour
 			print ("left");*/
 			if (levellogic.levelnum () > Level) 
 			{
+
 				ReturnHome ();
 				h1 = 0;
 				v1 = 0;

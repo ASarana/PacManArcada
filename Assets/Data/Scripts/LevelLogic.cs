@@ -9,6 +9,12 @@ public class LevelLogic : MonoBehaviour
 	private float timer;
 	private bool pacmandie;
 	private int pacmanlife;
+	private string orientationghost;
+	
+	private string	Clydestatus;
+	private string	Pinkystatus;
+	private string	Inkystatus;
+	private string	Blinkystatus;
 
 
 
@@ -19,7 +25,11 @@ public class LevelLogic : MonoBehaviour
 		levelstart = false;
 		timer = Time.time;
 		pacmanlife = 3;
-
+		orientationghost="natural";
+		Clydestatus="life";
+		Pinkystatus="life";
+		Inkystatus="life";
+		Blinkystatus="life";
 	}
 	
 	// Update is called once per frame
@@ -87,4 +97,59 @@ public class LevelLogic : MonoBehaviour
 	{
 		 pacmandie = true;
 	}
+	public void makeghostblue()
+	{
+		orientationghost = "blue";
+	}
+	public void makeghostnatural()
+	{
+		orientationghost = "natural";
+	}
+	public void dieghost(string name)
+	{
+		if (name == "Clyde")
+			Clydestatus = "dead";
+		else if (name == "Pinky")
+			Pinkystatus = "dead";
+		else if (name == "Inky")
+			Inkystatus = "dead";
+		else if (name == "Blinky")
+			Blinkystatus = "dead";
+		else 
+			print ("error name diehost");
+
+	}
+	public string statusghost(string name)
+	{
+		if (name == "Clyde")
+			return Clydestatus;
+		else if (name == "Pinky")
+			return Pinkystatus;
+		else if (name == "Inky")
+			return Inkystatus;
+		else if (name == "Blinky")
+			return Blinkystatus;
+		else
+			return "error";
+
+	}
+	public void riseghost(string name)
+	{
+		if (name == "Clyde")
+			Clydestatus = "life";
+		if (name == "Pinky")
+			Pinkystatus = "life";
+		if (name == "Inky")
+			Inkystatus = "life";
+		if (name == "Blinky")
+			Blinkystatus = "life";
+		else
+			print ("error name diehost");
+	}
+
+	public string ghostorientation()
+	{
+		return orientationghost;
+	}
+	
 }
