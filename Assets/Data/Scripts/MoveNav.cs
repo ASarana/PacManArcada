@@ -21,7 +21,6 @@ public class MoveNav : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		print (levellogic.statusghost(this.name));
 		if (levellogic.ghostorientation()=="blue" && levellogic.statusghost(this.name)=="life") //если призрак синий, то ему надо повернуться
 			this.transform.rotation = Quaternion.Euler (new Vector3 (0, 0, 0));
 		else if (levellogic.ghostorientation()=="natural" && levellogic.statusghost(this.name)=="life") //тут наоборот
@@ -36,7 +35,7 @@ public class MoveNav : MonoBehaviour
 			else 
 				agent.destination = zeropos; //если он голубой или мертв, идем в стартовую локацию
 
-			if(levellogic.statusghost(this.name)=="dead" && agent.transform.position == zeropos) //если мертвый пришел в старт, то он оживает
+			if(levellogic.statusghost(this.name)=="dead" && agent.remainingDistance<=2) //если мертвый пришел в старт, то он оживает
 				levellogic.riseghost(this.name);
 
 			/*if (agent.remainingDistance < 2) 
