@@ -6,10 +6,61 @@ ModelImporter:
   serializedVersion: 18
   fileIDToRecycleName:
     100000: //RootNode
+    100002: 1life
+    100004: 2life
+    100006: 3life
+    100008: ButtonDown
+    100010: Buttonleft
+    100012: ButtonPower
+    100014: ButtonReset
+    100016: ButtonRight
+    100018: ButtonUp
+    100020: Coin
     400000: //RootNode
+    400002: 1life
+    400004: 2life
+    400006: 3life
+    400008: ButtonDown
+    400010: Buttonleft
+    400012: ButtonPower
+    400014: ButtonReset
+    400016: ButtonRight
+    400018: ButtonUp
+    400020: Coin
     2300000: //RootNode
+    2300002: 1life
+    2300004: 2life
+    2300006: 3life
+    2300008: ButtonDown
+    2300010: Buttonleft
+    2300012: ButtonPower
+    2300014: ButtonReset
+    2300016: ButtonRight
+    2300018: ButtonUp
+    2300020: Coin
     3300000: //RootNode
+    3300002: 1life
+    3300004: 2life
+    3300006: 3life
+    3300008: ButtonDown
+    3300010: Buttonleft
+    3300012: ButtonPower
+    3300014: ButtonReset
+    3300016: ButtonRight
+    3300018: ButtonUp
+    3300020: Coin
     4300000: "\u041F\u043B\u043E\u0441\u043A\u043E\u0441\u0442\u044C"
+    4300002: Table
+    4300004: 3life
+    4300006: 2life
+    4300008: Coin
+    4300010: Buttonleft
+    4300012: ButtonDown
+    4300014: ButtonUp
+    4300016: ButtonRight
+    4300018: ButtonReset
+    4300020: ButtonPower
+    4300022: 1life
   materials:
     importMaterials: 1
     materialName: 0
