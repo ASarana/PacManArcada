@@ -1,0 +1,225 @@
+fileFormatVersion: 2
+guid: b5f6d1af35afea04c9f1f772e0dad635
+timeCreated: 1449943360
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Coin
+    7400000: Coin|1life|1life|Button ResetAction|1life|Button ResetAction
+    7400002: Coin|1life|1life|ButtonDownAction|1life|ButtonDownAction
+    7400004: Coin|1life|1life|ButtonleftAction|1life|ButtonleftAction
+    7400006: Coin|1life|1life|ButtonPowerAction.001|1life|ButtonPowerAction.001
+    7400008: Coin|1life|1life|ButtonPowerAction|1life|ButtonPowerAction
+    7400010: Coin|1life|1life|ButtonResetAction|1life|ButtonResetAction
+    7400012: Coin|1life|1life|ButtonRightAction.001|1life|ButtonRightAction.001
+    7400014: Coin|1life|1life|ButtonRightAction|1life|ButtonRightAction
+    7400016: Coin|1life|1life|ButtonUpAction|1life|ButtonUpAction
+    7400018: Coin|1life|1life|CoinAction.001|1life|CoinAction.001
+    7400020: Coin|1life|1life|CoinAction|1life|CoinAction
+    7400022: Coin|2life|2life|Button ResetAction|2life|Button ResetAction
+    7400024: Coin|2life|2life|ButtonDownAction|2life|ButtonDownAction
+    7400026: Coin|2life|2life|ButtonleftAction|2life|ButtonleftAction
+    7400028: Coin|2life|2life|ButtonPowerAction.001|2life|ButtonPowerAction.001
+    7400030: Coin|2life|2life|ButtonPowerAction|2life|ButtonPowerAction
+    7400032: Coin|2life|2life|ButtonResetAction|2life|ButtonResetAction
+    7400034: Coin|2life|2life|ButtonRightAction.001|2life|ButtonRightAction.001
+    7400036: Coin|2life|2life|ButtonRightAction|2life|ButtonRightAction
+    7400038: Coin|2life|2life|ButtonUpAction|2life|ButtonUpAction
+    7400040: Coin|2life|2life|CoinAction.001|2life|CoinAction.001
+    7400042: Coin|2life|2life|CoinAction|2life|CoinAction
+    7400044: Coin|3life|3life|Button ResetAction|3life|Button ResetAction
+    7400046: Coin|3life|3life|ButtonDownAction|3life|ButtonDownAction
+    7400048: Coin|3life|3life|ButtonleftAction|3life|ButtonleftAction
+    7400050: Coin|3life|3life|ButtonPowerAction.001|3life|ButtonPowerAction.001
+    7400052: Coin|3life|3life|ButtonPowerAction|3life|ButtonPowerAction
+    7400054: Coin|3life|3life|ButtonResetAction|3life|ButtonResetAction
+    7400056: Coin|3life|3life|ButtonRightAction.001|3life|ButtonRightAction.001
+    7400058: Coin|3life|3life|ButtonRightAction|3life|ButtonRightAction
+    7400060: Coin|3life|3life|ButtonUpAction|3life|ButtonUpAction
+    7400062: Coin|3life|3life|CoinAction.001|3life|CoinAction.001
+    7400064: Coin|3life|3life|CoinAction|3life|CoinAction
+    7400066: Coin|ButtonDown|ButtonDown|Button ResetAction|ButtonDown|Button Rese
+    7400068: Coin|ButtonDown|ButtonDown|ButtonDownAction|ButtonDown|ButtonDownAct
+    7400070: Coin|ButtonDown|ButtonDown|ButtonleftAction|ButtonDown|ButtonleftAct
+    7400072: Coin|ButtonDown|ButtonDown|ButtonPowerAction.001|ButtonDown|ButtonPo
+    7400074: Coin|ButtonDown|ButtonDown|ButtonPowerAction|ButtonDown|ButtonPowerA
+    7400076: Coin|ButtonDown|ButtonDown|ButtonResetAction|ButtonDown|ButtonResetA
+    7400078: Coin|ButtonDown|ButtonDown|ButtonRightAction.001|ButtonDown|ButtonRi
+    7400080: Coin|ButtonDown|ButtonDown|ButtonRightAction|ButtonDown|ButtonRightA
+    7400082: Coin|ButtonDown|ButtonDown|ButtonUpAction|ButtonDown|ButtonUpAction
+    7400084: Coin|ButtonDown|ButtonDown|CoinAction.001|ButtonDown|CoinAction.001
+    7400086: Coin|ButtonDown|ButtonDown|CoinAction|ButtonDown|CoinAction
+    7400088: Coin|Buttonleft|Buttonleft|Button ResetAction|Buttonleft|Button Rese
+    7400090: Coin|Buttonleft|Buttonleft|ButtonDownAction|Buttonleft|ButtonDownAct
+    7400092: Coin|Buttonleft|Buttonleft|ButtonleftAction|Buttonleft|ButtonleftAct
+    7400094: Coin|Buttonleft|Buttonleft|ButtonPowerAction.001|Buttonleft|ButtonPo
+    7400096: Coin|Buttonleft|Buttonleft|ButtonPowerAction|Buttonleft|ButtonPowerA
+    7400098: Coin|Buttonleft|Buttonleft|ButtonResetAction|Buttonleft|ButtonResetA
+    7400100: Coin|Buttonleft|Buttonleft|ButtonRightAction.001|Buttonleft|ButtonRi
+    7400102: Coin|Buttonleft|Buttonleft|ButtonRightAction|Buttonleft|ButtonRightA
+    7400104: Coin|Buttonleft|Buttonleft|ButtonUpAction|Buttonleft|ButtonUpAction
+    7400106: Coin|Buttonleft|Buttonleft|CoinAction.001|Buttonleft|CoinAction.001
+    7400108: Coin|Buttonleft|Buttonleft|CoinAction|Buttonleft|CoinAction
+    7400110: Coin|ButtonPower|ButtonPower|Button ResetAction|ButtonPower|Button R
+    7400112: Coin|ButtonPower|ButtonPower|ButtonDownAction|ButtonPower|ButtonDown
+    7400114: Coin|ButtonPower|ButtonPower|ButtonleftAction|ButtonPower|Buttonleft
+    7400116: Coin|ButtonPower|ButtonPower|ButtonPowerAction.001|ButtonPower|Butto
+    7400118: Coin|ButtonPower|ButtonPower|ButtonPowerAction|ButtonPower|ButtonPow
+    7400120: Coin|ButtonPower|ButtonPower|ButtonResetAction|ButtonPower|ButtonRes
+    7400122: Coin|ButtonPower|ButtonPower|ButtonRightAction.001|ButtonPower|Butto
+    7400124: Coin|ButtonPower|ButtonPower|ButtonRightAction|ButtonPower|ButtonRig
+    7400126: Coin|ButtonPower|ButtonPower|ButtonUpAction|ButtonPower|ButtonUpActi
+    7400128: Coin|ButtonPower|ButtonPower|CoinAction.001|ButtonPower|CoinAction.0
+    7400130: Coin|ButtonPower|ButtonPower|CoinAction|ButtonPower|CoinAction
+    7400132: Coin|ButtonReset|ButtonReset|Button ResetAction|ButtonReset|Button R
+    7400134: Coin|ButtonReset|ButtonReset|ButtonDownAction|ButtonReset|ButtonDown
+    7400136: Coin|ButtonReset|ButtonReset|ButtonleftAction|ButtonReset|Buttonleft
+    7400138: Coin|ButtonReset|ButtonReset|ButtonPowerAction.001|ButtonReset|Butto
+    7400140: Coin|ButtonReset|ButtonReset|ButtonPowerAction|ButtonReset|ButtonPow
+    7400142: Coin|ButtonReset|ButtonReset|ButtonResetAction|ButtonReset|ButtonRes
+    7400144: Coin|ButtonReset|ButtonReset|ButtonRightAction.001|ButtonReset|Butto
+    7400146: Coin|ButtonReset|ButtonReset|ButtonRightAction|ButtonReset|ButtonRig
+    7400148: Coin|ButtonReset|ButtonReset|ButtonUpAction|ButtonReset|ButtonUpActi
+    7400150: Coin|ButtonReset|ButtonReset|CoinAction.001|ButtonReset|CoinAction.0
+    7400152: Coin|ButtonReset|ButtonReset|CoinAction|ButtonReset|CoinAction
+    7400154: Coin|ButtonRight|ButtonRight|Button ResetAction|ButtonRight|Button R
+    7400156: Coin|ButtonRight|ButtonRight|ButtonDownAction|ButtonRight|ButtonDown
+    7400158: Coin|ButtonRight|ButtonRight|ButtonleftAction|ButtonRight|Buttonleft
+    7400160: Coin|ButtonRight|ButtonRight|ButtonPowerAction.001|ButtonRight|Butto
+    7400162: Coin|ButtonRight|ButtonRight|ButtonPowerAction|ButtonRight|ButtonPow
+    7400164: Coin|ButtonRight|ButtonRight|ButtonResetAction|ButtonRight|ButtonRes
+    7400166: Coin|ButtonRight|ButtonRight|ButtonRightAction.001|ButtonRight|Butto
+    7400168: Coin|ButtonRight|ButtonRight|ButtonRightAction|ButtonRight|ButtonRig
+    7400170: Coin|ButtonRight|ButtonRight|ButtonUpAction|ButtonRight|ButtonUpActi
+    7400172: Coin|ButtonRight|ButtonRight|CoinAction.001|ButtonRight|CoinAction.0
+    7400174: Coin|ButtonRight|ButtonRight|CoinAction|ButtonRight|CoinAction
+    7400176: Coin|ButtonUp|ButtonUp|Button ResetAction|ButtonUp|Button ResetActio
+    7400178: Coin|ButtonUp|ButtonUp|ButtonDownAction|ButtonUp|ButtonDownAction
+    7400180: Coin|ButtonUp|ButtonUp|ButtonleftAction|ButtonUp|ButtonleftAction
+    7400182: Coin|ButtonUp|ButtonUp|ButtonPowerAction.001|ButtonUp|ButtonPowerAct
+    7400184: Coin|ButtonUp|ButtonUp|ButtonPowerAction|ButtonUp|ButtonPowerAction
+    7400186: Coin|ButtonUp|ButtonUp|ButtonResetAction|ButtonUp|ButtonResetAction
+    7400188: Coin|ButtonUp|ButtonUp|ButtonRightAction.001|ButtonUp|ButtonRightAct
+    7400190: Coin|ButtonUp|ButtonUp|ButtonRightAction|ButtonUp|ButtonRightAction
+    7400192: Coin|ButtonUp|ButtonUp|ButtonUpAction|ButtonUp|ButtonUpAction
+    7400194: Coin|ButtonUp|ButtonUp|CoinAction.001|ButtonUp|CoinAction.001
+    7400196: Coin|ButtonUp|ButtonUp|CoinAction|ButtonUp|CoinAction
+    7400198: Push
+    7400200: Coin|Coin|Coin|Button ResetAction|Coin|Button ResetAction
+    7400202: Coin|Coin|Coin|ButtonDownAction|Coin|ButtonDownAction
+    7400204: Coin|Coin|Coin|ButtonleftAction|Coin|ButtonleftAction
+    7400206: Coin|Coin|Coin|ButtonPowerAction.001|Coin|ButtonPowerAction.001
+    7400208: Coin|Coin|Coin|ButtonPowerAction|Coin|ButtonPowerAction
+    7400210: Coin|Coin|Coin|ButtonResetAction|Coin|ButtonResetAction
+    7400212: Coin|Coin|Coin|ButtonRightAction.001|Coin|ButtonRightAction.001
+    7400214: Coin|Coin|Coin|ButtonRightAction|Coin|ButtonRightAction
+    7400216: Coin|Coin|Coin|ButtonUpAction|Coin|ButtonUpAction
+    7400218: Coin|Coin|Coin|CoinAction.001|Coin|CoinAction.001
+    7400220: Coin|Coin|Coin|CoinAction|Coin|CoinAction
+    7400222: Coin|Table|Table|Button ResetAction|Table|Button ResetAction
+    7400224: Coin|Table|Table|ButtonDownAction|Table|ButtonDownAction
+    7400226: Coin|Table|Table|ButtonleftAction|Table|ButtonleftAction
+    7400228: Coin|Table|Table|ButtonPowerAction.001|Table|ButtonPowerAction.001
+    7400230: Coin|Table|Table|ButtonPowerAction|Table|ButtonPowerAction
+    7400232: Coin|Table|Table|ButtonResetAction|Table|ButtonResetAction
+    7400234: Coin|Table|Table|ButtonRightAction.001|Table|ButtonRightAction.001
+    7400236: Coin|Table|Table|ButtonRightAction|Table|ButtonRightAction
+    7400238: Coin|Table|Table|ButtonUpAction|Table|ButtonUpAction
+    7400240: Coin|Table|Table|CoinAction.001|Table|CoinAction.001
+    7400242: Push
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Push
+      takeName: Coin|CoinAction
+      firstFrame: 0
+      lastFrame: 32
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -11,7 +11,7 @@ public class redpoint : MonoBehaviour
 	public Transform blinky;*/
 	private Transform point_trans; //это для манипуляций с точкой
 	private float timer;
-	public int pointcount; //это чтобы знать что уровень закончен количество съеденных точек
+	//public int pointcount; //это чтобы знать что уровень закончен количество съеденных точек
 	public LevelLogic levellogic;
 	// Use this for initialization
 	void Start () 
@@ -30,7 +30,7 @@ public class redpoint : MonoBehaviour
 		    ) 
 		{
 			//сдвинем точку плд платформу, якобы пакман её взял
-			print ("Держитесь, суки");
+		//	print ("Держитесь, суки");
 			point_trans.position= new Vector3(point_trans.position.x,point_trans.position.y-10,point_trans.position.z);
 			//pointcount++;
 			levellogic.makeghostblue();
@@ -40,6 +40,8 @@ public class redpoint : MonoBehaviour
 		if (Time.time - timer >= 10) 
 		{
 			levellogic.makeghostnatural();
+			//print (timer);
+
 		}
 
 	}

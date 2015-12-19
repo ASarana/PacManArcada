@@ -36,7 +36,7 @@ public class LevelLogic : MonoBehaviour
 	void Update () 
 	{
 
-		if (countpoint == 8) 
+		if (countpoint == 146) 
 		{
 			level++;
 			levelstart=false;

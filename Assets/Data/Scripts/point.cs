@@ -25,7 +25,6 @@ public class point : MonoBehaviour
 		   ) 
 		{
 			//сдвинем точку плд платформу, якобы пакман её взял
-			print ("Взял");
 			this.transform.position= new Vector3(this.transform.position.x,this.transform.position.y-10,this.transform.position.z);
 			LevelLogic.TakePoint(); //увеличиваем переменну отвечающую за взятые точки
 		}
