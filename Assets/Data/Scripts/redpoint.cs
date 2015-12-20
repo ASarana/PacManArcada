@@ -9,14 +9,14 @@ public class redpoint : MonoBehaviour
 	public Transform pinky;
 	public Transform inky;
 	public Transform blinky;*/
-	private Transform point_trans; //это для манипуляций с точкой
+	private Vector3 point_trans; //это для манипуляций с точкой
 	private float timer;
 	//public int pointcount; //это чтобы знать что уровень закончен количество съеденных точек
 	public LevelLogic levellogic;
 	// Use this for initialization
 	void Start () 
 	{
-		point_trans = GetComponent<Transform> (); // берем трансформ текущего объекта - точки
+		point_trans = this.transform.position;
 
 	}
 	
@@ -24,24 +24,24 @@ public class redpoint : MonoBehaviour
 	void Update () 
 	{ 
 		//отследим, что пакман дотронулся до точки
-		if (point_trans.position.x <= (pacman_trans.position.x + 0.5) && point_trans.position.x >= (pacman_trans.position.x - 0.5)
-		    && point_trans.position.z <= (pacman_trans.position.z + 0.5) && point_trans.position.z >= (pacman_trans.position.z - 0.5) 
-		    && point_trans.position.y <= (pacman_trans.position.y + 2) && point_trans.position.y >= (pacman_trans.position.y - 2)
+		if (this.transform.position.x <= (pacman_trans.position.x + 0.5) && this.transform.position.x >= (pacman_trans.position.x - 0.5)
+			&& this.transform.position.z <= (pacman_trans.position.z + 0.5) && this.transform.position.z >= (pacman_trans.position.z - 0.5) 
+			&& this.transform.position.y <= (pacman_trans.position.y + 2) && this.transform.position.y >= (pacman_trans.position.y - 2)
 		    ) 
 		{
 			//сдвинем точку плд платформу, якобы пакман её взял
 		//	print ("Держитесь, суки");
-			point_trans.position= new Vector3(point_trans.position.x,point_trans.position.y-10,point_trans.position.z);
+			this.transform.position= new Vector3(this.transform.position.x,this.transform.position.y-10,this.transform.position.z);
 			//pointcount++;
 			levellogic.makeghostblue();
 			timer = Time.time;
 		}
 
-		if (Time.time - timer >= 10) 
+		if (Time.time - timer >= 10 && point_trans.y-10==this.transform.position.y) 
 		{
 			levellogic.makeghostnatural();
 			//print (timer);
-
+			this.transform.position= new Vector3(this.transform.position.x,this.transform.position.y-10,this.transform.position.z);
 		}
 
 	}
