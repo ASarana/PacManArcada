@@ -15,6 +15,8 @@ public class LevelLogic : MonoBehaviour
 	private string	Pinkystatus;
 	private string	Inkystatus;
 	private string	Blinkystatus;
+	int score;
+
 
 
 
@@ -30,16 +32,17 @@ public class LevelLogic : MonoBehaviour
 		Pinkystatus="life";
 		Inkystatus="life";
 		Blinkystatus="life";
+		score = 0;
 	}
-	
+
 	// Update is called once per frame
 	void Update () 
 	{
 
 		if (countpoint == 146) 
 		{
-			level++;
 			levelstart=false;
+			level++;
 			countpoint=0;
 			timer = Time.time;	
 
@@ -49,19 +52,6 @@ public class LevelLogic : MonoBehaviour
 		{
 			levelstart=true;
 			pacmandie = false;
-		}
-
-		if (pacmandie == true & levelstart == true) 
-		{
-			if (pacmanlife > 0) 
-			{
-
-				pacmanlife--;
-				timer = Time.time;
-				levelstart=false;
-
-			}
-			else levelstart=false;
 		}
 
 	}
@@ -84,6 +74,11 @@ public class LevelLogic : MonoBehaviour
 	{
 		return levelstart;
 	}
+	public void levelstop()
+	{
+		levelstart = false;
+		timer = Time.time;
+	}
 
 	public bool ispacmandie()
 	{
@@ -96,6 +91,7 @@ public class LevelLogic : MonoBehaviour
 	public void diepacman()
 	{
 		 pacmandie = true;
+		pacmanlife--;
 	}
 	public void makeghostblue()
 	{
@@ -115,8 +111,8 @@ public class LevelLogic : MonoBehaviour
 			Inkystatus = "dead";
 		else if (name == "Blinky")
 			Blinkystatus = "dead";
-		else 
-			print ("error name diehost");
+		/*else 
+			print ("error name diehost");*/
 
 	}
 	public string statusghost(string name)
@@ -143,13 +139,21 @@ public class LevelLogic : MonoBehaviour
 			Inkystatus = "life";
 		if (name == "Blinky")
 			Blinkystatus = "life";
-		else
-			print ("error name diehost");
+		/*else
+			print ("error name risehost");*/
 	}
 
 	public string ghostorientation()
 	{
 		return orientationghost;
 	}
-	
+	public void incscore(int N)
+	{
+		score=score+N;
+	}
+	public int showscore()
+	{
+		return score;
+	}
+		
 }

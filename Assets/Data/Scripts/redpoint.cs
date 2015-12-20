@@ -13,10 +13,14 @@ public class redpoint : MonoBehaviour
 	private float timer;
 	//public int pointcount; //это чтобы знать что уровень закончен количество съеденных точек
 	public LevelLogic levellogic;
+	private Vector3 zeropos;
+	private int Level;
 	// Use this for initialization
 	void Start () 
 	{
 		point_trans = this.transform.position;
+		zeropos = this.transform.position;
+		Level = levellogic.levelnum ();
 
 	}
 	
@@ -35,6 +39,7 @@ public class redpoint : MonoBehaviour
 			//pointcount++;
 			levellogic.makeghostblue();
 			timer = Time.time;
+			levellogic.incscore(5);
 		}
 
 		if (Time.time - timer >= 10 && point_trans.y-10==this.transform.position.y) 
@@ -44,5 +49,16 @@ public class redpoint : MonoBehaviour
 			this.transform.position= new Vector3(this.transform.position.x,this.transform.position.y-10,this.transform.position.z);
 		}
 
+		if (levellogic.levelnum() > Level) 
+		{
+			ReturnHome();
+			Level=levellogic.levelnum();
+		}
+
+	}
+
+	public void ReturnHome()
+	{
+		this.transform.position = zeropos;
 	}
 }
