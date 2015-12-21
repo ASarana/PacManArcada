@@ -29,8 +29,9 @@ public class point : MonoBehaviour
 			LevelLogic.TakePoint(); //увеличиваем переменну отвечающую за взятые точки
 			LevelLogic.incscore(1);
 		}
-
-		if (LevelLogic.levelnum() > Level) 
+			
+		if (!LevelLogic.islevelstart ()) 
+		if (LevelLogic.levelnum() > Level ||LevelLogic.levelnum() < Level) 
 		{
 			ReturnHome();
 			Level=LevelLogic.levelnum();

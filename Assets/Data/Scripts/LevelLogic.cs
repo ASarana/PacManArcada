@@ -48,12 +48,18 @@ public class LevelLogic : MonoBehaviour
 
 		}
 
-		if (levelstart==false && Time.time - timer >= 3 && pacmanlife>0)
+		if (levelstart==false && pacmanlife==0)
+		{
+			pacmanlife = 3;
+			score = 0;
+		}
+
+		if (levelstart==false && Time.time - timer >= 3)
 		{
 			levelstart=true;
 			pacmandie = false;
 		}
-
+			
 	}
 
 	//проедура увеличения количества съеденных точек

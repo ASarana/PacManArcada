@@ -34,9 +34,7 @@ public class redpoint : MonoBehaviour
 		    ) 
 		{
 			//сдвинем точку плд платформу, якобы пакман её взял
-		//	print ("Держитесь, суки");
 			this.transform.position= new Vector3(this.transform.position.x,this.transform.position.y-10,this.transform.position.z);
-			//pointcount++;
 			levellogic.makeghostblue();
 			timer = Time.time;
 			levellogic.incscore(5);
@@ -45,15 +43,15 @@ public class redpoint : MonoBehaviour
 		if (Time.time - timer >= 10 && point_trans.y-10==this.transform.position.y) 
 		{
 			levellogic.makeghostnatural();
-			//print (timer);
 			this.transform.position= new Vector3(this.transform.position.x,this.transform.position.y-10,this.transform.position.z);
 		}
 
-		if (levellogic.levelnum() > Level) 
-		{
-			ReturnHome();
-			Level=levellogic.levelnum();
-		}
+		if (!levellogic.islevelstart ()) 
+			if (levellogic.levelnum() > Level ||levellogic.levelnum() < Level) 
+			{
+				ReturnHome();
+				Level=levellogic.levelnum();
+			}
 
 	}
 

@@ -8,20 +8,15 @@ public class MoveNav : MonoBehaviour
 	private Vector3 zeropos;
 	public LevelLogic levellogic;
 	private int Level;
-	int Ipurp;
-	//Vector3[] placesInky;
 	public Transform[] test = new Transform[27];
 
 	// Use this for initialization
 	void Start () 
 	{
 		agent = GetComponent<NavMeshAgent>();
-//		ghost_transform = GetComponent<Transform> ();
 		zeropos = this.transform.position;
 		Level = levellogic.levelnum ();
-		agent.destination = this.transform.position;
-
-
+		agent.destination = zeropos;
 	}
 	
 	// Update is called once per frame
@@ -39,10 +34,8 @@ public class MoveNav : MonoBehaviour
 		{
 			if (levellogic.statusghost (this.name) == "life") 
 			{ //если призрак жив
-				//print(agent.remainingDistance);
 				if (agent.remainingDistance == 0) 
 				{
-					Ipurp = Random.Range (0, 6);
 					agent.destination = test [Random.Range (0, 26)].position;
 				} 
 			} 
@@ -71,22 +64,22 @@ public class MoveNav : MonoBehaviour
 
 
 		} 
-		else if (!levellogic.islevelstart () && levellogic.pacmanlifenum()>0) 
+		if (!levellogic.islevelstart ()) 
 		{
 			ReturnBase ();
-			if (levellogic.levelnum () > Level) 
+			if (levellogic.levelnum () > Level || levellogic.levelnum () < Level) 
 			{
-				agent.acceleration += 2;
+				//agent.acceleration += 2;
 				Level = levellogic.levelnum ();
-
 			}
+		//	if(this.name == "Inky") print (agent.remainingDistance);
 		}
 					
 	}
 	public void ReturnBase()
 	{
 		this.transform.position = zeropos;
-		agent.destination = this.transform.position;
+		agent.destination = zeropos;
 		this.transform.rotation = Quaternion.Euler (new Vector3 (0, 180, 0)); 
 		levellogic.makeghostnatural ();
 		levellogic.riseghost (this.name);
